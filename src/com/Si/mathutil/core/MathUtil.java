@@ -20,17 +20,33 @@ public class MathUtil {
     // Giai thừa là hàm đồ thị dốc đứng, tăng nhanh về phía giá trị.
     // 20! ~ 18 con số 0, vừa đủ cho kiểu Long trong Java
     // -> bài này n! với n chỉ trong khoảng 0...20 (21! tràn kiểu Long)
-    public static long getFactorial (int n) {
+    
+    /* public static long getFactorial (int n) {
+        if (n < 0 || n > 20)
+            throw new IllegalArgumentException("Invalid argument. N must be between 0...20");
+        
+        if (n == 0 || n == 1)
+            return 1;  // kết thúc sớm nếu nhận đầu vào đặc biệtß
+        
+        long product = 1;
+        
+        for (int i = 2; i <= n; i++) //tích nhân dồn, thuật toán nhồi 
+            product *= i;
+        return product;
+    }
+    
+    */
+    
+    
+    //Đệ quy - Recursion là hiện tượng gọi là chính mình với 1 quy mô nhỏ hơn
+    public static long getFactorial (int n) { 
         if (n < 0 || n > 20)
             throw new IllegalArgumentException("Invalid argument. N must be between 0...20");
         
         if (n == 0 || n == 1)
             return 1;
-        
-        long product = 1;
-        
-        for (int i = 2; i <= n; i++) 
-            product *= i;
-        return product;
+        return n * getFactorial(n - 1);
     }
+    
+    
 }
