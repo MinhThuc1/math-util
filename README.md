@@ -1,15 +1,25 @@
-[![CI with GitHub Actions using Ant and JUnit | © 2026 by Si](https://github.com/MinhThuc1/math-util/actions/workflows/ci-junit.yml/badge.svg)](https://github.com/MinhThuc1/math-util/actions/workflows/ci-junit.yml)
+# MathUtil
 
-# Welcome to Math-Util Repository
-### You will find in this Repo the following stuff:
-* The Math-Util library that offers multiple math functions (a Java-based source code)
-* Unit Testing source code with JUnit framework
-* GitHub Actions to demonstrate the Continuous Integration (CI) technique
-* Regression Test
-* ... Coming Soon
+Repository này lưu trữ hai phiên bản của project MathUtil. Branch `main` chỉ dùng làm trang giới thiệu; mã nguồn nằm trong các branch bên dưới.
 
+## Chọn phiên bản
 
-### Screenshots
-![DDT  & TDD with JUnit](https://github.com/MinhThuc1/math-util/blob/main/images/DDT%20with%20JUnit.jpeg)
+### [`math-util`](https://github.com/MinhThuc1/math-util/tree/math-util)
 
-#### © 10/2026 Si
+Phiên bản ban đầu sử dụng **Java**, **Apache Ant** và **JUnit 4**.
+
+```bash
+git clone --branch math-util https://github.com/MinhThuc1/math-util.git
+```
+
+### [`mathutil-junit5`](https://github.com/MinhThuc1/math-util/tree/mathutil-junit5)
+
+Phiên bản sử dụng **Java 21**, **Maven** và **JUnit 5**, kèm cấu hình Continuous Integration bằng GitHub Actions.
+
+```bash
+git clone --branch mathutil-junit5 https://github.com/MinhThuc1/math-util.git
+cd math-util
+mvn clean test
+```
+
+> Hãy chọn một trong hai branch trên để xem mã nguồn và hướng dẫn chi tiết của từng phiên bản.
